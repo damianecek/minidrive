@@ -8,11 +8,11 @@
   - Command-line interface with interactive shell and CLI parser.
   - Local filesystem manager for uploads/downloads/resume handling.
   - Synchronization engine for hashing, diffing, and incremental updates.
-  - Transfer manager implementing chunked binary streaming over TCP.
+  - Transfer manager implementing chunked streaming over TCP with rate limiting and resumable state.
 - **Server (`server/`)**
   - Listener accepting TCP connections using Asio with a thread pool.
   - Session manager controlling public/private roots and single-session limits.
-  - Command dispatcher with handlers for file/folder operations and sync APIs.
+  - Command dispatcher with handlers for file/folder operations, sync APIs, and structured logging via `spdlog`.
   - Persistence layer storing users, hashes, and resumable transfer metadata.
   - Filesystem executor guarded against path traversal using `std::filesystem`.
 - **Shared (`shared/`)**

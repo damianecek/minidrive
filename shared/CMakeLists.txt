@@ -1,5 +1,9 @@
 add_library(minidrive_shared STATIC
     src/version.cpp
+    src/error_codes.cpp
+    src/protocol.cpp
+    src/framing.cpp
+    src/crypto.cpp
 )
 
 target_include_directories(minidrive_shared

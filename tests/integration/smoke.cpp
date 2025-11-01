@@ -10,7 +10,8 @@
 #include <spdlog/spdlog.h>
 #include <sodium.h>
 
-int main() {
+int main()
+{
     // Test 1: Version check
     const auto v = minidrive::version();
     assert(!v.empty());
@@ -33,15 +34,16 @@ int main() {
     std::cout << "spdlog library linked" << std::endl;
 
     // Test 5: libsodium
-    if (sodium_init() < 0) {
+    if (sodium_init() < 0)
+    {
         std::cerr << "libsodium initialization failed" << std::endl;
         return 1;
     }
     unsigned char hash[crypto_generichash_BYTES];
-    const char* message = "test";
+    const char *message = "test";
     crypto_generichash(hash, sizeof(hash),
-                      reinterpret_cast<const unsigned char*>(message), 4,
-                      nullptr, 0);
+                       reinterpret_cast<const unsigned char *>(message), 4,
+                       nullptr, 0);
     std::cout << "libsodium library linked" << std::endl;
 
     std::cout << "\nAll libraries successfully linked!" << std::endl;

@@ -16,6 +16,8 @@ add_subdirectory(server)
 add_subdirectory(client)
 
 if(MINIDRIVE_BUILD_TESTS)
+    include(CTest)
+    enable_testing()
     add_subdirectory(tests)
 endif()
 

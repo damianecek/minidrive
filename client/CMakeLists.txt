@@ -11,6 +11,7 @@ target_link_libraries(minidrive_client
     PRIVATE
         minidrive_shared
         minidrive_warnings
+        spdlog::spdlog
 )
 
 set_target_properties(minidrive_client PROPERTIES OUTPUT_NAME client)

@@ -22,17 +22,25 @@ On Windows you may need to generate build files for `Ninja` or `Visual Studio` (
 ## Run
 
 ```
-./build/server --port 9000 --root ./data/server_root
-./build/client 127.0.0.1:9000
+./build/server/server --port 9000 --root ./data/server_root --log server.log
+./build/client/client alice@127.0.0.1:9000 --log client.log --max-upload-rate 262144 --max-download-rate 262144
 ```
 
-(Commands above are just an example.)
+Useful options:
+
+- `--upload-timeout <seconds>` on the server tunes the resumable upload window (default 3600s).
+- `--log <file>` on both binaries writes structured `spdlog` output in addition to the console.
+- Client `--max-upload-rate` / `--max-download-rate` rate-limit transfers (bytes per second).
+
+The client supports resumable uploads/downloads, local-to-remote sync (`SYNC <local> <remote>`),
+and persists interrupted transfers under `~/.minidrive/transfers.json` so work can resume automatically after restart.
 
 ## Testing
 
 ```
 cmake --build build --target integration_smoke
 ctest --test-dir build
+./build/tests/shared_unit_tests
 ```
 
 ## Repository Layout

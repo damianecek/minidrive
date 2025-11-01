@@ -1,9 +1,11 @@
 #include "minidrive/version.hpp"
 
-namespace minidrive {
+namespace minidrive
+{
 
-const char* resolved_version() {
-    return version().data();
-}
+    const char *resolved_version()
+    {
+        return version().data();
+    }
 
 } // namespace minidrive
