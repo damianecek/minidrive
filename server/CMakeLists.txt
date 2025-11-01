@@ -1,7 +1,13 @@
 add_executable(minidrive_server
     src/main.cpp
-    src/server.cpp
     src/session.cpp
+    src/session_auth.cpp
+    src/session_common.cpp
+    src/session_download.cpp
+    src/session_files.cpp
+    src/session_sync.cpp
+    src/session_upload.cpp
+    src/server.cpp
     src/session_manager.cpp
     src/user_store.cpp
     src/filesystem.cpp

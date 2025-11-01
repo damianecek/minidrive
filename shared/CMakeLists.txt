@@ -1,5 +1,6 @@
 add_library(minidrive_shared STATIC
     src/version.cpp
+    src/encoding/base64.cpp
     src/error_codes.cpp
     src/protocol.cpp
     src/framing.cpp

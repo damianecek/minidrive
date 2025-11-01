@@ -1,0 +1,10 @@
+2025-11-01 15:50:21 [info] Starting MiniDrive server 0.1.0 on 0.0.0.0:9000
+2025-11-01 15:50:21 [info] Listening on 0.0.0.0:9000 with root ./data/server_root
+2025-11-01 15:50:21 [info] Server event loop running with 22 threads
+2025-11-01 15:50:33 [info] Client connected from 127.0.0.1:38596
+2025-11-01 15:50:38 [info] Session authenticated as alice (127.0.0.1:38596)
+2025-11-01 15:51:03 [info] Closing connection for 127.0.0.1:38596
+2025-11-01 15:51:07 [info] Client connected from 127.0.0.1:51390
+2025-11-01 15:51:07 [info] Session authenticated as public (127.0.0.1:51390)
+2025-11-01 15:51:57 [info] Closing connection for 127.0.0.1:51390
+2025-11-01 15:52:26 [info] Signal received, shutting down

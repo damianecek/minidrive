@@ -8,6 +8,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include <nlohmann/json.hpp>
+
 #include "minidrive/error_codes.hpp"
 #include "minidrive/protocol.hpp"
 #include "minidrive/server/filesystem.hpp"

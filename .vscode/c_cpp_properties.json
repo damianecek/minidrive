@@ -3,7 +3,13 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/build/_deps/spdlog-src/include",
+                "${workspaceFolder}/client/include",
+                "${workspaceFolder}/build/_deps/nlohmann_json-src/include",
+                "${workspaceFolder}/build/_deps/libsodium-src/libsodium/src/libsodium/include",
+                "${workspaceFolder}/build/_deps/asio-src/asio/include",
+                "${workspaceFolder}/shared/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
